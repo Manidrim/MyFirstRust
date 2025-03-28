@@ -3,15 +3,18 @@ use std::io; // Importe la bibliothèque standard pour les entrées/sorties.
 fn main() {
     println!("Quel est votre nom ?");
 
-    let mut nom = String::new();
 
+    let nom = read_line();
+
+    print(nom.as_str());
+}
+
+fn read_line() -> String {
+    let mut from_keyboard = String::new();
     io::stdin()
-        .read_line(&mut nom)
+        .read_line(&mut from_keyboard)
         .expect("Échec de la lecture de l'entrée");
-
-    let nom = nom.trim();
-
-    print(nom);
+    return from_keyboard.trim().to_string();
 }
 
 fn print(nom: &str) {
