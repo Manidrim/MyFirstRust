@@ -1,0 +1,11 @@
+[package]
+name = "MyFirstRust"
+version = "0.1.0"
+authors = ["Manu Pendragon"]
+
+[dependencies]
+rustc-serialize = "0.3.24"
+
+[[bin]]
+name = "MyFirstRust"
+path = "main.rs"
