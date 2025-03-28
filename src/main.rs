@@ -1,23 +1,15 @@
-use std::io;
+mod in_out_terminal;
+
+use in_out_terminal::print;
+use in_out_terminal::read_line;
 
 fn main() {
     println!("Quel est votre nom ?");
 
 
-    let nom = read_line();
+    let nom: String = read_line();
 
     print(nom.as_str());
 }
 
-fn read_line() -> String {
-    let mut from_keyboard = String::new();
-    io::stdin()
-        .read_line(&mut from_keyboard)
-        .expect("Échec de la lecture de l'entrée");
-    return from_keyboard.trim().to_string();
-}
-
-fn print(nom: &str) {
-    println!("Bonjour, {} !", nom);
-}
 
