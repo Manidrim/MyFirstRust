@@ -1,4 +1,4 @@
-use std::io; // Importe la bibliothèque standard pour les entrées/sorties.
+use std::io;
 
 fn main() {
     println!("Quel est votre nom ?");
@@ -20,3 +20,4 @@ fn read_line() -> String {
 fn print(nom: &str) {
     println!("Bonjour, {} !", nom);
 }
+
