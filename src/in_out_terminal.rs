@@ -1,7 +1,11 @@
 use std::io;
 
-pub fn print(nom: &str) {
-    println!("Bonjour, {} !", nom);
+pub fn print_hello(nom: &str) {
+    print(&format!("Bonjour, {} !", nom));
+}
+
+pub fn print(string: &str) {
+    println!("{}", string);
 }
 
 pub fn read_line() -> String {

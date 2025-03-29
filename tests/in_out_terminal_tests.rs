@@ -17,6 +17,20 @@ mod tests {
     fn test_print() {
         // Capture la sortie de la fonction print
         let mut output = Vec::new();
+        let string = "Alice";
+        {
+            use std::io::Write;
+            let _ = write!(&mut output, "{}", string);
+        }
+
+        let expected_output = "Alice";
+        assert_eq!(String::from_utf8(output).unwrap(), expected_output);
+    }
+
+    #[test]
+    fn test_print_hello() {
+        // Capture la sortie de la fonction print
+        let mut output = Vec::new();
         let name = "Alice";
         {
             use std::io::Write;
